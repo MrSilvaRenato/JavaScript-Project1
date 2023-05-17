@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Popup Window with Dropdown Menus</title>
+  <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+  <button onclick="openPopup()">Open Popup</button>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2>Select Options</h2>
+      <form id="popupForm">
+        <label for="dropdown1">Dropdown 1:</label>
+        <select id="dropdown1">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+
+        <label for="dropdown2">Dropdown 2:</label>
+        <select id="dropdown2">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+
+        <button type="submit" onclick="submitSelection()">Submit</button>
+        
+      </form>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <div id="congratsPopup" class="popup">
+    <div class="popup-content">
+      <h2>Congratulations!</h2>
+      <p>Options selected:</p>
+      <ul id="selectedOptions"></ul>
+      <button onclick="closeCongratsPopup()">Close</button>
+    </div>
+  </div>
+
+  <script src="js.js"></script>
+</body>
+</html>
